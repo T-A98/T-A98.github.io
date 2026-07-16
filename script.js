@@ -3,7 +3,11 @@ const endDate = new Date("nov 25, 2026 00:00:00").getTime();
 const interval = setInterval(() => {
   const currentDate = new Date(),
     timeLeft = endDate - currentDate.getTime(), // in ms
-    daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate(); 
+    daysInMonth = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      0,
+    ).getDate();
 
   if (timeLeft <= 0) {
     clearInterval(x);
@@ -24,8 +28,8 @@ const interval = setInterval(() => {
     let className = countdownElement.classList[1]; // Get the second class name
     switch (className) {
       case "months":
-        countdownElement.innerHTML = months
-        break
+        countdownElement.innerHTML = months;
+        break;
       case "days":
         countdownElement.innerHTML = days;
         break;
@@ -43,3 +47,16 @@ const interval = setInterval(() => {
     }
   }
 }, 1000);
+
+const swiper = new Swiper(".progress-slide-carousel", {
+  loop: true,
+  fraction: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".progress-slide-carousel .swiper-pagination",
+    type: "progressbar",
+  },
+});

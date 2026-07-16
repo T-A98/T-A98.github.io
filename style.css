@@ -1,0 +1,17 @@
+.timer {
+  filter: brightness(100%)!important;
+}
+
+#bg {
+  filter: brightness(40%)!important;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 900;
+  background-size:cover
+}
+
+#timerContainer {
+  position: fixed;
+  z-index: 960;
+}

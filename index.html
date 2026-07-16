@@ -8,88 +8,132 @@
       href="https://cdn.jsdelivr.net/npm/pagedone@3.0.0/src/css/pagedone-v2.css "
       rel="stylesheet"
     />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <div
-      class="w-full h-96 rounded-2xl flex gap-9 flex-col items-center justify-center bg-cover bg-center"
-      style="
-        background-image: url(https://pagedone.io/asset/uploads/1710565658.jpg);
-      "
-    >
+    <div class="h-screen">
       <div
-        class="flex items-start justify-center w-full gap-1.5 count-down-main"
+        id="bg"
+        style="
+          background-image: url(https://as2.ftcdn.net/jpg/00/94/68/29/1000_F_94682947_mbx9YUIOPBzUhGlol1vPYelu9K7NGtHt.webp);
+        "
+      ></div>
+      <!-- <div class="w-full relative">
+      <div class="swiper progress-slide-carousel swiper-container relative">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
+            >
+              <span class="text-3xl font-semibold text-indigo-600"
+                >Slide 1
+              </span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
+            >
+              <span class="text-3xl font-semibold text-indigo-600"
+                >Slide 2
+              </span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
+            >
+              <span class="text-3xl font-semibold text-indigo-600"
+                >Slide 3
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-pagination bottom-2! top-auto! w-80! right-0 mx-auto bg-gray-100!"
+        ></div>
+      </div>
+    </div> -->
+      <div
+        id="timerContainer"
+        class="w-full h-full rounded-2xl flex gap-9 flex-col items-center justify-center bg-cover bg-center backdrop-blur-sm"
       >
-      <div class="timer">
-          <div
-            class="rounded-xl bg-black/25 backdrop-blur-xs py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 px-3"
-          >
-            <h3
-              class="countdown-element months font-manrope font-semibold text-2xl text-white text-center"
-            ></h3>
-            <p
-              class="text-lg uppercase font-normal text-white mt-1 text-center w-full"
-            >
-              Months
-            </p>
-          </div>
-        </div>
-        <div class="timer">
-          <div
-            class="rounded-xl bg-black/25 backdrop-blur-xs py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 px-3"
-          >
-            <h3
-              class="countdown-element days font-manrope font-semibold text-2xl text-white text-center"
-            ></h3>
-            <p
-              class="text-lg uppercase font-normal text-white mt-1 text-center w-full"
-            >
-              Days
-            </p>
-          </div>
-        </div>
+      <h1 class="text-4xl" ><span class="text-transparent bg-clip-text bg-gradient-to-r to-pink-500 from-indigo-500 text-4xl font-bold leading-tight ">Time until Europe Trip</span> ❤️</h1>
 
+        <div
+          class="flex items-center justify-center w-full gap-1.5 count-down-main"
+        >
         <div class="timer">
-          <div
-            class="rounded-xl bg-black/25 backdrop-blur-xs py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 px-3"
-          >
-            <h3
-              class="countdown-element hours font-manrope font-semibold text-2xl text-white text-center"
-            ></h3>
-            <p
-              class="text-lg uppercase font-normal text-white mt-1 text-center w-full"
+            <div
+              class="rounded-xl bg-gradient-to-b from-indigo-600 to-pink-600 py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 aspect-square px-3"
             >
-              Hours
-            </p>
+              <h3
+                class="countdown-element months font-manrope font-semibold text-2xl text-white text-center"
+              ></h3>
+              <p
+                class="text-lg font-manrope font-normal text-white mt-1 text-center w-full"
+              >
+                Months
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div class="timer">
-          <div
-            class="rounded-xl bg-black/25 backdrop-blur-xs py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 px-3"
-          >
-            <h3
-              class="countdown-element minutes font-manrope font-semibold text-2xl text-white text-center"
-            ></h3>
-            <p
-              class="text-lg fo font-normal uppercase text-white mt-1 text-center w-full"
+          <div class="timer">
+            <div
+              class="rounded-xl bg-gradient-to-b from-indigo-600 to-pink-600 py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 aspect-square px-3"
             >
-              Minutes
-            </p>
+              <h3
+                class="countdown-element days font-manrope font-semibold text-2xl text-white text-center"
+              ></h3>
+              <p
+                class="text-lg font-manrope font-normal text-white mt-1 text-center w-full"
+              >
+                Days
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div class="timer">
-          <div
-            class="rounded-xl bg-black/25 backdrop-blur-xs py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 px-3"
-          >
-            <h3
-              class="countdown-element seconds font-manrope font-semibold text-2xl text-white text-center"
-            ></h3>
-            <p
-              class="text-lg fo font-normal uppercase text-white mt-1 text-center w-full"
+          <div class="timer">
+            <div
+              class="rounded-xl bg-gradient-to-b from-indigo-600 to-pink-600 py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 aspect-square px-3"
             >
-              Seconds
-            </p>
+              <h3
+                class="countdown-element hours font-manrope font-semibold text-2xl text-white text-center"
+              ></h3>
+              <p
+                class="text-lg font-manrope font-normal text-white mt-1 text-center w-full"
+              >
+                Hours
+              </p>
+            </div>
+          </div>
+
+          <div class="timer">
+            <div
+              class="rounded-xl bg-gradient-to-b from-indigo-600 to-pink-600 py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 aspect-square px-3"
+            >
+              <h3
+                class="countdown-element minutes font-manrope font-semibold text-2xl text-white text-center"
+              ></h3>
+              <p
+                class="text-lg font-manrope font-normal text-white mt-1 text-center w-full"
+              >
+                Minutes
+              </p>
+            </div>
+          </div>
+
+          <div class="timer">
+            <div
+              class="rounded-xl bg-gradient-to-b from-indigo-600 to-pink-600 py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 aspect-square px-3"
+            >
+              <h3
+                class="countdown-element seconds font-manrope font-semibold text-2xl text-white text-center"
+              ></h3>
+              <p
+                class="text-lg font-manrope font-normal text-white mt-1 text-center w-full"
+              >
+                Seconds
+              </p>
+            </div>
           </div>
         </div>
       </div>
