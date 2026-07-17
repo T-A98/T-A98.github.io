@@ -1,8 +1,8 @@
-const endDate = new Date("nov 25, 2026 00:00:00").getTime();
+const endDate = new Date("nov 25, 2026 00:00:00");
 
 const interval = setInterval(() => {
   const currentDate = new Date(),
-    timeLeft = endDate - currentDate.getTime(), // in ms
+    timeLeft = endDate.getTime() - currentDate.getTime(), // in ms
     daysInMonth = new Date(
       currentDate.getFullYear(),
       currentDate.getMonth(),
@@ -18,7 +18,7 @@ const interval = setInterval(() => {
     minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60)),
     hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
     days = daysInMonth - currentDate.getDate(),
-    months = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * daysInMonth));
+    months = endDate.getMonth() - currentDate.getMonth();
 
   // Get elements by class name
   let countdownElements = document.getElementsByClassName("countdown-element");
@@ -48,15 +48,15 @@ const interval = setInterval(() => {
   }
 }, 1000);
 
-const swiper = new Swiper(".progress-slide-carousel", {
-  loop: true,
-  fraction: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".progress-slide-carousel .swiper-pagination",
-    type: "progressbar",
-  },
-});
+// const swiper = new Swiper(".progress-slide-carousel", {
+//   loop: true,
+//   fraction: true,
+//   autoplay: {
+//     delay: 5000,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".progress-slide-carousel .swiper-pagination",
+//     type: "progressbar",
+//   },
+// });
